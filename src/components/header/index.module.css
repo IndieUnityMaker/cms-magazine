@@ -1,0 +1,26 @@
+.header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header.dark {
+    background-color: var(--dark-heading);
+    border-bottom: var(--dark-border-color);
+    color: var(--dark-text);
+}
+.header.light {
+    background-color: var(--light-heading);
+    border-bottom: var(--light-border-color);
+    color: var(--light-text);
+}
+
+.profileButton {
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}

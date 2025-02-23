@@ -1,0 +1,23 @@
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.dark {
+    background-color: var(--dark-side);
+    border-right: var(--dark-border-color);
+}
+.sidebar.light {
+    background-color: var(--light-side);
+    border-right: var(--light-border-color);
+}
+
+.sidebarButton {
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
