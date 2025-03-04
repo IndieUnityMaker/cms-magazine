@@ -1,0 +1,95 @@
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 40px;
+    color: #0d0c22;
+    line-height: 28px;
+    background-color: var(--light-main);
+}
+
+.formContainer {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+.formContent {
+    font-weight: bold;
+    width: 100%;
+    max-width: 416px;
+    margin: auto;
+}
+
+.formContainer h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+}
+
+.inputGroup input {
+    padding: 18px 20px;
+    width: 100%;
+    border: 1.5px solid #e7e7e9;
+    border-radius: 12px;
+}
+
+.formContent button {
+    font-weight: bold;
+    padding: 18px 20px;
+    background-color: #0d0c22;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.formContent button:hover {
+    background-color: #565564;
+}
+
+.noAcc {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    color: #0d0c2279;
+    font-size: small;
+}
+.noAcc a {
+    text-decoration: underline;
+}
+
+.divider {
+    height: 1px;
+    margin: 30px 0;
+    padding: 0;
+    overflow: visible;
+    border: none;
+    background-color: #e7e7e9;
+    color: #6e6d7a;
+    text-align: center;
+}
+.divider::after {
+    content: "Войти с помощью Email";
+    display: inline-block;
+    border-radius: 12px;
+    position: relative;
+    top: -14px;
+    padding: 0 16px;
+    background: #fff;
+}
+.error {
+    text-align: center;
+    color: red;
+    font-weight: 400;
+}

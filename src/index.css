@@ -53,10 +53,26 @@ img {
 
 body {
     height: 100vh;
+    background-color: var(--light-main);
+    color: var(--light-text);
 }
 
 #root {
     display: flex;
     flex-direction: column;
     height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+body > div {
+    border-left: 2px solid var(--light-main);
+    border-right: 2px solid var(--light-main);
+}
+body.dark-theme {
+    background-color: var(--dark-heading);
+    color: var(--dark-text);
+}
+body.dark-theme > div {
+    border-left: 2px solid var(--dark-main);
+    border-right: 2px solid var(--dark-main);
 }
