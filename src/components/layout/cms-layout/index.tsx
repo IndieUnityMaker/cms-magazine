@@ -1,6 +1,7 @@
-import { useTheme } from "../../providers/theme-provider/theme-context";
-import { Header } from "../header";
-import { SideBar } from "../side-bar";
+import { useEffect } from "react";
+import { useTheme } from "../../../providers/theme-provider/theme-context";
+import { Header } from "../../header";
+import { SideBar } from "../../side-bar";
 
 import styles from "./index.module.css";
 
@@ -11,7 +12,13 @@ interface LayoutProps {
 export const Layout = ({ children }: LayoutProps) => {
     const { isDark } = useTheme();
 
-    console.log(".mainContainer", isDark);
+    useEffect(() => {
+        if (isDark) {
+            document.body.classList.add("dark-theme");
+        } else {
+            document.body.classList.remove("dark-theme");
+        }
+    }, [isDark]);
 
     return (
         <>
