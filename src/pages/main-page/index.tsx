@@ -1,4 +1,4 @@
-import { Layout } from "../../components/layout";
+import { Layout } from "../../components/layout/cms-layout";
 
 export const MainPage = () => {
     return (
