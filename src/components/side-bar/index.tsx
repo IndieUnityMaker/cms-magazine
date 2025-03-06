@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { useTheme } from "../../providers/theme-provider/theme-context";
 import styles from "./index.module.css";
+import { Paths } from "../../paths";
 
 export const SideBar = () => {
     const { isDark } = useTheme();
@@ -10,10 +12,18 @@ export const SideBar = () => {
                 isDark ? styles.dark : styles.light
             }`}
         >
-            <button className={styles.sidebarButton}>Кнопка 1</button>
-            <button className={styles.sidebarButton}>Кнопка 2</button>
-            <button className={styles.sidebarButton}>Кнопка 3</button>
-            <button className={styles.sidebarButton}>Кнопка 4</button>
+            <Link className={styles.sidebarButton} to={Paths.home}>
+                Главная
+            </Link>
+            <Link className={styles.sidebarButton} to={Paths.clients}>
+                Клиенты
+            </Link>
+            <Link className={styles.sidebarButton} to={Paths.orders}>
+                Заказы
+            </Link>
+            <Link className={styles.sidebarButton} to={Paths.products}>
+                Товары
+            </Link>
         </aside>
     );
 };
