@@ -23,4 +23,18 @@
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
+    background-color: var(--light-button-bg);
+    color: var(--light-button-text);
+    border-radius: 10px;
+}
+.profileButton:hover {
+    background-color: var(--light-button-hover-bg);
+}
+.header.dark .profileButton {
+    background-color: var(--dark-button-bg);
+    color: var(--dark-button-text);
+}
+
+.header.dark .profileButton:hover {
+    background-color: var(--dark-button-hover-bg);
 }

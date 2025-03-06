@@ -17,7 +17,25 @@
 .sidebarButton {
     border: none;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     cursor: pointer;
     transition: background-color 0.3s;
+}
+
+.sidebar.dark .sidebarButton {
+    background-color: var(--dark-button-bg);
+    color: var(--dark-button-text);
+    border-radius: 15px;
+}
+.sidebar.dark .sidebarButton:hover {
+    background-color: var(--dark-button-hover-bg);
+}
+
+.sidebar.light .sidebarButton {
+    background-color: var(--light-button-bg);
+    color: var(--light-button-text);
+    border-radius: 15px;
+}
+.sidebar.light .sidebarButton:hover {
+    background-color: var(--light-button-hover-bg);
 }

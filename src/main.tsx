@@ -7,6 +7,8 @@ import { MainPage } from "./pages/main-page/index.tsx";
 import { ThemeProvider } from "./providers/theme-provider/index.tsx";
 import { LoginPage } from "./pages/login-page/index.tsx";
 import { RegisterPage } from "./pages/register-page/index.tsx";
+import { ProductsPage } from "./pages/products-page/index.tsx";
+import { ClientsPage } from "./pages/clients-page/index.tsx";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
     {
         path: Paths.home,
         element: <MainPage />,
+    },
+    {
+        path: Paths.products,
+        element: <ProductsPage />,
+    },
+    {
+        path: Paths.clients,
+        element: <ClientsPage />,
     },
 ]);
 
