@@ -3,7 +3,6 @@ import styles from "./index.module.css";
 
 export const Header = () => {
     const { isDark } = useTheme();
-    console.log(isDark);
 
     return (
         <header

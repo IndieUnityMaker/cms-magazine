@@ -1,21 +1,25 @@
 :root {
     --light-text: #000000; /* Цвет текста */
-    --light-side: #ffffff; /* Основной фоновый цвет */
-    --light-heading: #ffffff; /* Цвет заголовков */
+    --light-side: #d4d9e1; /* Основной фоновый цвет */
+    --light-heading: #d4d9e1; /* Цвет заголовков */
     --light-main: #f6f6f8;
     --light-accent: #e9e9e9; /* Цвет акцентов */
-    --light-button-bg: #a1a1a1; /* Цвет фона кнопок */
+    --light-button-bg: #e7eaf1; /* Цвет фона кнопок */
     --light-button-text: #000000; /* Цвет текста кнопок */
-    --light-button-hover-bg: #8d8d8d; /* Цвет фона кнопок при наведении */
+    --light-button-hover-bg: rgb(
+        202,
+        206,
+        212
+    ); /* Цвет фона кнопок при наведении */
 
     --dark-text: #ffffff; /* Белый */
     --dark-side: #212731; /* Светло-оранжевый */
     --dark-heading: #212731; /* Светло-оранжевый */
     --dark-main: #333b49; /* Светло-оранжевый */
     --dark-accent: #ffa726; /* Яркий оранжевый */
-    --dark-button-bg: #ffa726; /* Яркий оранжевый */
-    --dark-button-text: #000000; /* Чёрный */
-    --dark-button-hover-bg: #ff9800; /* Яркий оранжевый */
+    --dark-button-bg: #363f4f; /* Яркий оранжевый */
+    --dark-button-text: #f3f3f3; /* Чёрный */
+    --dark-button-hover-bg: #444f63; /* Яркий оранжевый */
 
     --light-border-color: 1px solid #f6f6f8;
     --dark-border-color: 1px solid #333b49;
@@ -53,26 +57,11 @@ img {
 
 body {
     height: 100vh;
-    background-color: var(--light-main);
-    color: var(--light-text);
 }
 
 #root {
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-body > div {
-    border-left: 2px solid var(--light-main);
-    border-right: 2px solid var(--light-main);
-}
-body.dark-theme {
-    background-color: var(--dark-heading);
-    color: var(--dark-text);
-}
-body.dark-theme > div {
-    border-left: 2px solid var(--dark-main);
-    border-right: 2px solid var(--dark-main);
+    overflow: hidden;
 }
