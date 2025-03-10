@@ -38,3 +38,10 @@
 .header.dark .profileButton:hover {
     background-color: var(--dark-button-hover-bg);
 }
+
+.headerRight {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding-left: 3px;
+}

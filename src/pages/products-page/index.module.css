@@ -1,0 +1,59 @@
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.inputSearch {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-button-bg);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+    outline: 2px solid var(--light-heading);
+}
+.inputSearch::placeholder {
+    color: var(--light-text);
+}
+.selectFilter {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: var(--light-button-bg);
+    border: 2px solid var(--light-heading);
+}
+
+.selectFilter option {
+    padding: 8px 12px;
+    color: inherit;
+    background-color: inherit;
+    outline: none;
+}
+
+.selectFilter:focus {
+    outline: none;
+}
+
+.inputSearch.dark {
+    background-color: var(--dark-button-bg);
+    outline: 2px solid var(--dark-heading);
+    color: var(--dark-text);
+}
+.inputSearch.dark:focus {
+    outline: 2px solid var(--dark-heading);
+}
+.inputSearch.dark::placeholder {
+    color: var(--dark-text);
+}
+.selectFilter.dark {
+    background-color: var(--dark-button-bg);
+    color: var(--dark-text);
+    border: 2px solid var(--dark-heading);
+}
+.selectFilter.dark:focus {
+    outline: none;
+}

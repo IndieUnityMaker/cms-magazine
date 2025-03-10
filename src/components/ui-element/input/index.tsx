@@ -6,9 +6,9 @@ interface InputElementProps {
     style?: React.CSSProperties;
     change?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     action?: () => void;
-    required?: boolean; // Опциональное свойство для обязательного ввода
-    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void; // Опциональная обработка события blur
-    value?: string; // Для управления значением компонента
+    required?: boolean;
+    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+    value?: string;
 }
 
 export const InputElement: React.FC<InputElementProps> = ({
@@ -17,7 +17,7 @@ export const InputElement: React.FC<InputElementProps> = ({
     style,
     change,
     action,
-    required = false, // Значение по умолчанию для required
+    required = false,
     onBlur,
     value,
 }) => {
@@ -29,9 +29,9 @@ export const InputElement: React.FC<InputElementProps> = ({
             type={type}
             placeholder={placeholder}
             style={style}
-            required={required} // Используем опциональное свойство
-            value={value} // Устанавливаем значение поля ввода
-            aria-required={required} // Для улучшения доступности
+            required={required}
+            value={value}
+            aria-required={required}
         />
     );
 };

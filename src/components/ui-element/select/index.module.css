@@ -1,0 +1,78 @@
+.selectContainer {
+    display: flex;
+    position: relative;
+}
+
+.placeholderContainer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    position: relative;
+}
+.selectButton {
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    background-color: var(--light-button-bg);
+    border: 2px solid var(--light-heading);
+    cursor: pointer;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: center;
+    width: fit-content;
+}
+
+.optionList {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    background-color: var(--light-main);
+    border: 2px solid var(--light-heading);
+    margin-top: 4px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.optionList .option {
+    border-bottom: 1px solid var(--light-heading);
+}
+.optionList .option:last-child {
+    border-bottom: none;
+}
+
+.option {
+    display: block;
+    width: auto;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+    background-color: var(--light-button-bg);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.option:hover {
+    background-color: var(--light-accent);
+}
+
+.selectButton.dark {
+    background-color: var(--dark-button-bg);
+    border: 2px solid var(--dark-heading);
+    color: var(--dark-text);
+}
+.optionList.dark {
+    background-color: var(--dark-main);
+    border: 2px solid var(--dark-heading);
+}
+.optionList.dark .option {
+    border-bottom: 1px solid var(--dark-heading);
+}
+.option.dark {
+    background-color: var(--dark-button-bg);
+    color: var(--dark-text);
+}
+
+.option.dark:hover {
+    background-color: var(--dark-accent);
+}
