@@ -156,8 +156,8 @@ const productsAll: ProductType[] = [
 export const ProductsPage = () => {
     const [products, setProducts] = useState(productsAll);
     const [searchWord, setSearchWord] = useState("");
-    const [selectedStatus, setSelectedStatus] = useState("все");
-    const [selectedCategory, setSelectedCategory] = useState("все");
+    const [selectedStatus, setSelectedStatus] = useState("все статусы");
+    const [selectedCategory, setSelectedCategory] = useState("все категории");
     const { isDark } = useTheme();
 
     const productColumns: { title: string; key: keyof ProductType }[] = [
