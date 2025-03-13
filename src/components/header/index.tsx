@@ -1,4 +1,5 @@
 import { useTheme } from "../../providers/theme-provider/theme-context";
+import { ThemeButton } from "../ui-element/themeButton";
 import styles from "./index.module.css";
 
 export const Header = () => {
@@ -11,7 +12,11 @@ export const Header = () => {
             }`}
         >
             <h1>CMS Magazine</h1>
-            <button className={styles.profileButton}>Профиль</button>
+
+            <div className={styles.headerRight}>
+                <ThemeButton />
+                <button className={styles.profileButton}>Профиль</button>
+            </div>
         </header>
     );
 };
