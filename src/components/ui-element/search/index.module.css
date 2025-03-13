@@ -1,0 +1,26 @@
+.inputSearch {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-button-bg);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s;
+    outline: 2px solid var(--light-heading);
+}
+
+.inputSearch::placeholder {
+    color: var(--light-text);
+}
+
+.inputSearch.dark {
+    background-color: var(--dark-button-bg);
+    outline: 2px solid var(--dark-heading);
+    color: var(--dark-text);
+}
+.inputSearch.dark:focus {
+    outline: 2px solid var(--dark-heading);
+}
+.inputSearch.dark::placeholder {
+    color: var(--dark-text);
+}

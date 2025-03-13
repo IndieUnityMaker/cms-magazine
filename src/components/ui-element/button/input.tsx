@@ -1,3 +1,5 @@
+import styles from "./index.module.css";
+
 interface ButtonElementProps {
     text: string;
     style?: React.CSSProperties;
@@ -6,6 +8,7 @@ interface ButtonElementProps {
     disabled?: boolean;
     onMouseEnter?: () => void;
     onMouseLeave?: () => void;
+    isDark: boolean;
 }
 
 export const ButtonElement: React.FC<ButtonElementProps> = ({
@@ -16,6 +19,7 @@ export const ButtonElement: React.FC<ButtonElementProps> = ({
     disabled = false,
     onMouseEnter,
     onMouseLeave,
+    isDark,
 }) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         if (preventDefault) {
@@ -26,6 +30,9 @@ export const ButtonElement: React.FC<ButtonElementProps> = ({
 
     return (
         <button
+            className={`${styles.defaultButton} ${
+                isDark ? styles.dark : styles.light
+            }`}
             style={style}
             onClick={handleClick}
             disabled={disabled}

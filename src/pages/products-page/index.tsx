@@ -6,6 +6,8 @@ import style from "./index.module.css";
 import { ChangeEvent, useState } from "react";
 import { useTheme } from "../../providers/theme-provider/theme-context";
 import { SelectElement } from "../../components/ui-element/select";
+import { SearchElement } from "../../components/ui-element/search";
+import { ButtonElement } from "../../components/ui-element/button/input";
 
 const productsAll: ProductType[] = [
     {
@@ -232,14 +234,7 @@ export const ProductsPage = () => {
     return (
         <Layout>
             <div className={style.inputContainer}>
-                <input
-                    onChange={handleSearch}
-                    className={`${style.inputSearch} ${
-                        isDark ? style.dark : style.light
-                    }`}
-                    type="text"
-                    placeholder="найти"
-                />
+                <SearchElement onChange={handleSearch} isDark={isDark} />
                 <SelectElement
                     mainOption="Все категории"
                     options={["Категория A", "Категория B", "Категория С"]}
@@ -249,6 +244,11 @@ export const ProductsPage = () => {
                     mainOption="Все статусы"
                     options={["В наличии", "Нет"]}
                     onChange={handleStatusChange}
+                />
+                <ButtonElement
+                    text="Добавить товар"
+                    isDark={isDark}
+                    action={() => console.log("Добавить товар")}
                 />
             </div>
 

@@ -1,0 +1,14 @@
+.defaultButton {
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: var(--light-button-bg);
+    border: 2px solid var(--light-heading);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.defaultButton.dark {
+    background-color: var(--dark-button-bg);
+    color: var(--dark-text);
+    border: 2px solid var(--dark-heading);
+}
