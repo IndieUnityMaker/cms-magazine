@@ -9,6 +9,7 @@ import { LoginPage } from "./pages/login-page/index.tsx";
 import { RegisterPage } from "./pages/register-page/index.tsx";
 import { ProductsPage } from "./pages/products-page/index.tsx";
 import { ClientsPage } from "./pages/clients-page/index.tsx";
+import { OrdersPage } from "./pages/orders-page/index.tsx";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     {
         path: Paths.clients,
         element: <ClientsPage />,
+    },
+    {
+        path: Paths.orders,
+        element: <OrdersPage />,
     },
 ]);
 
