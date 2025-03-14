@@ -5,26 +5,26 @@ export const productsApi = api.injectEndpoints({
     endpoints: (builder) => ({
         getAllProducts: builder.query<ProductType[], void>({
             query: () => ({
-                url: '/products',
+                url: '/cms/products',
                 method: 'GET'
             })
         }),
         getProduct: builder.query<ProductType, string>({
             query: (id) => ({
-                url: `/products/${id}`,
+                url: `/cms/products/${id}`,
                 method: 'GET'
             })
         }),
         editProduct: builder.mutation<string, ProductType>({
             query: (product) => ({
-                url: `/products/edit/${product.id}`,
+                url: `/cms/products/edit/${product.id}`,
                 method: 'PUT',
                 body: product
             })
         }),
         removeProduct: builder.mutation<string, string>({
             query: (id) => ({
-                url: `/products/remove/${id}`,
+                url: `/cms/products/remove/${id}`,
                 method: 'POST',
                 body: {
                     id
@@ -33,7 +33,7 @@ export const productsApi = api.injectEndpoints({
         }),
         createProduct: builder.mutation<ProductType, ProductType>({
             query: (product) => ({
-                url: '/products/add',
+                url: '/cms/products/add',
                 method: 'POST',
                 body: product
             })
